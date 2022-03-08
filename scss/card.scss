@@ -1,0 +1,30 @@
+@import "reset";
+@import "style";
+
+body{
+    font-family: $Outfit;
+    background-color: $BGVeryDarkBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    div{
+
+        div.card{
+            width: 35rem;
+
+            img.card_img{
+
+            }
+        }
+
+    }
+    
+
+    div.attribution{
+        position: absolute;
+        bottom: 1rem;
+
+        @media screen and (max-width: 375px){ bottom: 0;}
+    }
+}
