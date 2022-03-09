@@ -1,20 +1,75 @@
 @import "reset";
-@import "style";
+@import "styles";
 
 body{
     font-family: $Outfit;
     background-color: $BGVeryDarkBlue;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $White;
     
     div{
 
         div.card{
-            width: 35rem;
+            width: 17rem;
+            background-color: $CardBGVeryDarkBlue;
+            padding: 1.3rem;
+            border-radius: 20px;
 
-            img.card_img{
+            img.card__img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
 
+            h1.card__name{
+                font-size: 1.2rem;
+            }
+
+            p.card__description{
+                font-size: 0.9rem;
+                color: $SoftBlue;
+                font-weight: 500;
+            }
+
+            div.card__infos{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p.info_text-eth{
+                    color: $Cyan;
+                    img.info_img-ethereum{
+                        align-self: center;
+                    }
+                }
+
+                p.info_text-clock{
+                    color: $SoftBlue;
+                    img.info_img-clock{
+
+                    }
+                }
+            }
+
+            div.card_nft-creator{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 30px;
+                    border-radius: 100%;
+                    border: 1px solid $White;
+                }
+
+                p{
+                    span{
+
+                    }
+                }
             }
         }
 

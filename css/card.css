@@ -1,0 +1,112 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0d192b;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+body div div.card {
+  width: 17rem;
+  background-color: #14253d;
+  padding: 1.3rem;
+  border-radius: 20px;
+}
+body div div.card img.card__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+body div div.card h1.card__name {
+  font-size: 1.2rem;
+}
+body div div.card p.card__description {
+  font-size: 0.9rem;
+  color: #8bacda;
+  font-weight: 500;
+}
+body div div.card div.card__infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body div div.card div.card__infos p.info_text-eth {
+  color: #00fff7;
+}
+body div div.card div.card__infos p.info_text-eth img.info_img-ethereum {
+  align-self: center;
+}
+body div div.card div.card__infos p.info_text-clock {
+  color: #8bacda;
+}
+body div div.card div.card_nft-creator {
+  display: flex;
+  align-items: center;
+}
+body div div.card div.card_nft-creator img {
+  width: 30px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+body div.attribution {
+  position: absolute;
+  bottom: 1rem;
+}
+@media screen and (max-width: 375px) {
+  body div.attribution {
+    bottom: 0;
+  }
+}
