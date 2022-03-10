@@ -16,24 +16,69 @@ body{
 
         div.card{
             width: 17rem;
+            max-width: 100%;
             background-color: $CardBGVeryDarkBlue;
             padding: 1.3rem;
             border-radius: 20px;
 
-            img.card__img{
-                width: 100%;
-                object-fit: cover;
-                border-radius: 10px;
+            div.card__image-content{                
+                margin: 0 auto;
+                position: relative;
+
+                &::after{
+                    content: url("../images/icon-view.svg");
+                    position: absolute;
+                    border-radius: 10px;
+                    top: 0px;
+                    left: 0px;
+                    text-align: center;
+                    background: rgb(0, 255, 247, 0.5);
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: all 0.4s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &:hover::after{
+                    opacity: 1;
+                    cursor: pointer;
+                }
+
+                img.card__img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    object-fit: cover;                                    
+                    opacity: 1;
+                }
+    
+
             }
 
-            h1.card__name{
+            
+            .card__img, .card__name, .card_nft-creator span{
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover{                    
+                    color: $Cyan;
+                }
+            }
+
+            h1.card__name{                
                 font-size: 1.2rem;
+
+                
             }
 
             p.card__description{
                 font-size: 0.9rem;
                 color: $SoftBlue;
                 font-weight: 500;
+                line-height: 20px;
             }
 
             div.card__infos{
@@ -41,24 +86,52 @@ body{
                 justify-content: space-between;
                 align-items: center;
 
+                p{
+                    display: flex;
+                    align-items: center;
+                    @media screen and (max-width: 375px){ font-size: .8rem;}
+
+                    img{
+                        object-fit: contain;                        
+                        margin-right: .3rem;
+                        
+                        
+                    }
+                }
+
                 p.info_text-eth{
                     color: $Cyan;
-                    img.info_img-ethereum{
-                        align-self: center;
+
+                    img.info_img-eth{                        
+                        width: 10px;
+
+                        @media screen and (max-width: 375px){ width: 8.5px!important;}
                     }
                 }
 
                 p.info_text-clock{
                     color: $SoftBlue;
                     img.info_img-clock{
-
+                        width: 15px;
                     }
                 }
             }
 
             div.card_nft-creator{
+                position: relative;
                 display: flex;
                 align-items: center;
+                margin-top: 2rem;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $LineVeryDarkBlue;
+                    bottom: 2.6rem;
+                }
+
                 img{
                     width: 30px;
                     border-radius: 100%;
@@ -66,10 +139,17 @@ body{
                 }
 
                 p{
+                    font-size: 0.9rem;
+                    margin: 0 1rem;
+                    color: $SoftBlue;
                     span{
-
+                        color: $White;
                     }
                 }
+            }
+
+            .card__name, .card__description, .card__infos, .card_nft-creater{
+                margin: 1.3rem 0;
             }
         }
 
@@ -80,6 +160,10 @@ body{
         position: absolute;
         bottom: 1rem;
 
-        @media screen and (max-width: 375px){ bottom: 0;}
+        a{
+            color: $Cyan;
+        }
+
+        @media screen and (max-width: 375px){ bottom: 1rem; font-size: 0.5rem;}
     }
 }
