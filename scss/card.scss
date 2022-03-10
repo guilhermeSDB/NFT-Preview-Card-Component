@@ -5,17 +5,17 @@ body{
     font-family: $Outfit;
     background-color: $BGVeryDarkBlue;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     color: $White;
     
-    div{
+    main{
 
         div.card{
-            width: 17rem;
+            width: 18rem;
             max-width: 100%;
             background-color: $CardBGVeryDarkBlue;
             padding: 1.3rem;
@@ -59,7 +59,7 @@ body{
             }
 
             
-            .card__img, .card__name, .card_nft-creator span{
+            .card__img, .card__name, .card_nft-creator a{
                 cursor: pointer;
                 transition: 0.3s;
 
@@ -86,9 +86,10 @@ body{
                 justify-content: space-between;
                 align-items: center;
 
-                p{
+                div{
                     display: flex;
                     align-items: center;
+                    font-size: .85rem;
                     @media screen and (max-width: 375px){ font-size: .8rem;}
 
                     img{
@@ -99,9 +100,9 @@ body{
                     }
                 }
 
-                p.info_text-eth{
+                div.info_text-eth{
                     color: $Cyan;
-
+                    font-size: .9rem;
                     img.info_img-eth{                        
                         width: 10px;
 
@@ -109,7 +110,7 @@ body{
                     }
                 }
 
-                p.info_text-clock{
+                div.info_text-clock{
                     color: $SoftBlue;
                     img.info_img-clock{
                         width: 15px;
@@ -136,13 +137,16 @@ body{
                     width: 30px;
                     border-radius: 100%;
                     border: 1px solid $White;
+                    margin: 0 .2rem 0 0;
                 }
 
                 p{
+                    
                     font-size: 0.9rem;
-                    margin: 0 1rem;
-                    color: $SoftBlue;
-                    span{
+                    margin: 0 .6rem;
+                    color: $SoftBlue;                    
+                    a{
+                        text-decoration: none;
                         color: $White;
                     }
                 }

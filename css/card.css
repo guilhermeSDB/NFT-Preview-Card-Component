@@ -51,25 +51,25 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: #0d192b;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
 }
-body div div.card {
-  width: 17rem;
+body main div.card {
+  width: 18rem;
   max-width: 100%;
   background-color: #14253d;
   padding: 1.3rem;
   border-radius: 20px;
 }
-body div div.card div.card__image-content {
+body main div.card div.card__image-content {
   margin: 0 auto;
   position: relative;
 }
-body div div.card div.card__image-content::after {
+body main div.card div.card__image-content::after {
   content: url("../images/icon-view.svg");
   position: absolute;
   border-radius: 10px;
@@ -85,11 +85,11 @@ body div div.card div.card__image-content::after {
   align-items: center;
   justify-content: center;
 }
-body div div.card div.card__image-content:hover::after {
+body main div.card div.card__image-content:hover::after {
   opacity: 1;
   cursor: pointer;
 }
-body div div.card div.card__image-content img.card__img {
+body main div.card div.card__image-content img.card__img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -97,65 +97,67 @@ body div div.card div.card__image-content img.card__img {
      object-fit: cover;
   opacity: 1;
 }
-body div div.card .card__img, body div div.card .card__name, body div div.card .card_nft-creator span {
+body main div.card .card__img, body main div.card .card__name, body main div.card .card_nft-creator a {
   cursor: pointer;
   transition: 0.3s;
 }
-body div div.card .card__img:hover, body div div.card .card__name:hover, body div div.card .card_nft-creator span:hover {
+body main div.card .card__img:hover, body main div.card .card__name:hover, body main div.card .card_nft-creator a:hover {
   color: #00fff7;
 }
-body div div.card h1.card__name {
+body main div.card h1.card__name {
   font-size: 1.2rem;
 }
-body div div.card p.card__description {
+body main div.card p.card__description {
   font-size: 0.9rem;
   color: #8bacda;
   font-weight: 500;
   line-height: 20px;
 }
-body div div.card div.card__infos {
+body main div.card div.card__infos {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body div div.card div.card__infos p {
+body main div.card div.card__infos div {
   display: flex;
   align-items: center;
+  font-size: 0.85rem;
 }
 @media screen and (max-width: 375px) {
-  body div div.card div.card__infos p {
+  body main div.card div.card__infos div {
     font-size: 0.8rem;
   }
 }
-body div div.card div.card__infos p img {
+body main div.card div.card__infos div img {
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 0.3rem;
 }
-body div div.card div.card__infos p.info_text-eth {
+body main div.card div.card__infos div.info_text-eth {
   color: #00fff7;
+  font-size: 0.9rem;
 }
-body div div.card div.card__infos p.info_text-eth img.info_img-eth {
+body main div.card div.card__infos div.info_text-eth img.info_img-eth {
   width: 10px;
 }
 @media screen and (max-width: 375px) {
-  body div div.card div.card__infos p.info_text-eth img.info_img-eth {
+  body main div.card div.card__infos div.info_text-eth img.info_img-eth {
     width: 8.5px !important;
   }
 }
-body div div.card div.card__infos p.info_text-clock {
+body main div.card div.card__infos div.info_text-clock {
   color: #8bacda;
 }
-body div div.card div.card__infos p.info_text-clock img.info_img-clock {
+body main div.card div.card__infos div.info_text-clock img.info_img-clock {
   width: 15px;
 }
-body div div.card div.card_nft-creator {
+body main div.card div.card_nft-creator {
   position: relative;
   display: flex;
   align-items: center;
   margin-top: 2rem;
 }
-body div div.card div.card_nft-creator::before {
+body main div.card div.card_nft-creator::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -163,20 +165,22 @@ body div div.card div.card_nft-creator::before {
   background-color: #2f415b;
   bottom: 2.6rem;
 }
-body div div.card div.card_nft-creator img {
+body main div.card div.card_nft-creator img {
   width: 30px;
   border-radius: 100%;
   border: 1px solid white;
+  margin: 0 0.2rem 0 0;
 }
-body div div.card div.card_nft-creator p {
+body main div.card div.card_nft-creator p {
   font-size: 0.9rem;
-  margin: 0 1rem;
+  margin: 0 0.6rem;
   color: #8bacda;
 }
-body div div.card div.card_nft-creator p span {
+body main div.card div.card_nft-creator p a {
+  text-decoration: none;
   color: white;
 }
-body div div.card .card__name, body div div.card .card__description, body div div.card .card__infos, body div div.card .card_nft-creater {
+body main div.card .card__name, body main div.card .card__description, body main div.card .card__infos, body main div.card .card_nft-creater {
   margin: 1.3rem 0;
 }
 body div.attribution {
